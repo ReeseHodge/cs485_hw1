@@ -1,0 +1,266 @@
+{   
+    "AttackSkills":[
+    {"Name":"Fireball","CostType":"Mana","CostAmount":5,"Damage":10},
+    {"Name":"Snowball","CostType":"Mana","CostAmount":5,"Damage":10},
+    {"Name":"Water ball","CostType":"Mana","CostAmount":4,"Damage":10},
+    {"Name":"Sword Slash","CostType":"Stamina","CostAmount":10,"Damage":10},
+    {"Name":"Light ball","CostType":"Mana","CostAmount":10,"Damage":10},
+    {"Name":"Shield Bash","CostType":"Stamina","CostAmount":15,"Damage":10}
+    ],
+    "BattleSkills":[
+    {"Name":"Analyze","CostType":"Mana","CostAmount":"5"},
+    {"Name":"Use Item","CostType":"","CostAmount":"0"},
+    {"Name":"Attack","CostType":"","CostAmount":"0"}
+    ],
+    "bosses":[
+        {"id":1,"name":"Flaxia Barkridge","Description":"A evil dryad that is wanted for the attacks on human settlements on the outside of the dungeon"},
+        {"id":2,"name":"Celeste Mock","Description":"A Vampire that is wanted for the attacks on animals by animal farmers on the outside of the dungeon."},
+        {"id":3,"name":"Ferula Norwood","Description":"A witch who uses all the elements and wants to study humans."},
+        {"id":4,"name":"Phantom","Description":"A fenrir who has a massive blood lust and is able to use shadows to jump around."},
+        {"id":5,"name":"Luna","Description":"A embodiment of the moon."}
+    ],
+    "characters":[
+        {   
+            "ID":0,
+            "Name":"",
+            "Stats":[
+                {"valueType":"Hit Points","value":100},
+                {"valueType":"Stamina","value":100},
+                {"valueType":"Mana","value":100},
+                {"valueType":"Attack","value":0},
+                {"valueType":"Defense","value":0},
+                {"valueType":"Magic Attack","value":0},
+                {"valueType":"Magic Defense","value":0},
+                {"valueType":"Speed","value":0},
+                {"valueType":"Max Hit Points","value":100},
+                {"valueType":"Max Stamina Points","value":100},
+                {"valueType":"Max Mana","value":100},
+                {"valueType":"Gold","value":0},
+                {"valueType":"Skills","value":[]}
+            ],
+            "inventory":[]
+        },
+        {   
+            "ID":1,
+            "Name":"",
+            "Stats":[
+                {"valueType":"Hit Points","value":100},
+                {"valueType":"Stamina","value":100},
+                {"valueType":"Mana","value":100},
+                {"valueType":"Attack","value":0},
+                {"valueType":"Defense","value":0},
+                {"valueType":"Magic Attack","value":0},
+                {"valueType":"Magic Defense","value":0},
+                {"valueType":"Speed","value":0},
+                {"valueType":"Max Hit Points","value":100},
+                {"valueType":"Max Stamina Points","value":100},
+                {"valueType":"Max Mana","value":100},
+                {"valueType":"Gold","value":0},
+                {"valueType":"Skills","value":[]}
+            ]
+        },
+        {   
+            "ID":2,
+            "Name":"",
+            "Stats":[
+                {"valueType":"Hit Points","value":100},
+                {"valueType":"Stamina","value":100},
+                {"valueType":"Mana","value":100},
+                {"valueType":"Attack","value":0},
+                {"valueType":"Defense","value":0},
+                {"valueType":"Magic Attack","value":0},
+                {"valueType":"Magic Defense","value":0},
+                {"valueType":"Speed","value":0},
+                {"valueType":"Max Hit Points","value":100},
+                {"valueType":"Max Stamina Points","value":100},
+                {"valueType":"Max Mana","value":100},
+                {"valueType":"Gold","value":0},
+                {"valueType":"Skills","value":[]}
+            ]
+        },
+        {   
+            "ID":3,
+            "Name":"",
+            "Stats":[
+                {"valueType":"Hit Points","value":100},
+                {"valueType":"Stamina","value":100},
+                {"valueType":"Mana","value":100},
+                {"valueType":"Attack","value":0},
+                {"valueType":"Defense","value":0},
+                {"valueType":"Magic Attack","value":0},
+                {"valueType":"Magic Defense","value":0},
+                {"valueType":"Speed","value":0},
+                {"valueType":"Max Hit Points","value":100},
+                {"valueType":"Max Stamina Points","value":100},
+                {"valueType":"Max Mana","value":100},
+                {"valueType":"Gold","value":0},
+                {"valueType":"Skills","value":[]}
+            ]
+        }
+    ],
+    "directions":[
+        {"1":"north"},
+        {"2":"west"},
+        {"3":"east"},
+        {"4":"south"}
+    ],
+    "items":[
+    {"ID":1,"Name":"Health Pot.","Description":"Restores Health by 10%"},
+    {"ID":2,"Name":"Stamina Pot.","Description":"Restores Stamina by 10%"},
+    {"ID":3,"Name":"Mana Pot.","Description":"Restores Mana by 10% "},
+    {"ID":4,"Name":"Resurrection Pot.","Description":"Revives a character."},
+    {"ID":5,"Name":"Iron Sword","Description":""},
+    {"ID":6,"Name":"Iron Battle Axe","Description":""},
+    {"ID":7,"Name":"Iron Greatsword","Description":""},
+    {"ID":8,"Name":"Gold x 10","Description":"10 Gold Pieces"},
+    {"ID":9,"Name":"Gold x 20","Description":"20 Gold Pieces"},
+    {"ID":10,"Name":"Gold x 45","Description":"45 Gold Pieces"},
+    {"ID":11,"Name":"Gold x 90","Description":"90 Gold Pieces"},
+    {"ID":12,"Name":"","Description":""},
+    {"ID":13,"Name":"","Description":""},
+    {"ID":14,"Name":"","Description":""},
+    {"ID":15,"Name":"","Description":""},
+    {"ID":16,"Name":"","Description":""},
+    {"ID":17,"Name":"","Description":""},
+    {"ID":18,"Name":"","Description":""},
+    {"ID":19,"Name":"","Description":""},
+    {"ID":20,"Name":"","Description":""}
+    ],
+    "currentStimulus":0,
+    "currentDopamine":0,
+    "start_state":"start",
+    "states":{
+        "start":{
+            "text":"Welcome to the EverChanging Dungeon:\n please press \"interact\" in order to start",
+            "next_state":[
+                {"state_name":"game_play","key_input":"interact"}
+            ]
+        },
+        "game_play":{
+            "text":"",
+            "next_state":[
+                {"state_name":"game_play","key_input":["north","east","west","south","interact"]},
+                {"state_name":"menu","key_input":"menu"},
+                {"state_name":"end","key_input":""}
+            ]
+        },
+        "menu":{
+            "next_state":[
+                {"state_name":"game_play","key_input":"menu"}
+            ]
+        },
+        "end":{
+            "text":"You completed the game. Please press interact to restart.","next_state":[
+                {"state_name":"start","key_input":"interact"}
+            ]
+        }
+    },
+    "roomTypes":[
+        {"id":0,"typeName":"Empty Room","Description":"A safe empty room that has only entrances to other rooms.","stimulusChange":1,"dopamineChange":0},
+        {"id":1,"typeName":"Chest Room","Description":"A room that has entrances to other rooms, as well as a chest, in which you will be given a item","stimulusChange":1,"dopamineChange":0},
+        {"id":2,"typeName":"Enemy Room","Description":"A empty room that has only entrances to other rooms.","stimulusChange":1,"dopamineChange":0},
+        {"id":3,"typeName":"Mimic Room","Description":"A room that has entrances to other rooms, as well as a chest mimic, that will attack when opened.","stimulusChange":1,"dopamineChange":0},
+        {"id":4,"typeName":"Shop Room","Description":"A safe room where there is a shop keeper who will trade gold for ","stimulusChange":1,"dopamineChange":3},
+        {"id":5,"typeName":"Boss Room","Description":"A almost empty room that has 2 entrances to other rooms, and the final boss of the floor.","stimulusChange":1,"dopamineChange":0},
+        {"id":6,"typeName":"Treasure Room","Description":"A room with a ton of gold and objects","stimulusChange":0,"dopamineChange":10}
+    ],
+    "roomsVisited":[],
+    "roomDescriptions":[
+        {
+            "type":"0",
+            "roomTypeName":"EmptyRoom",
+            "data":[
+                {"id":"1","Description":"You see {description of room}."},
+                {"id":"2","Description":"You see {description of room}."},
+                {"id":"3","Description":"You see {description of room}."},
+                {"id":"4","Description":"You see {description of room}."},
+                {"id":"5","Description":"You see {description of room}."},
+                {"id":"6","Description":"You see {description of room}."},
+                {"id":"7","Description":"You see {description of room}."},
+                {"id":"8","Description":"You see {description of room}."},
+                {"id":"9","Description":"You see {description of room}."},
+                {"id":"10","Description":"You see {description of room}."}
+            ]
+        },
+        {
+            "type":"1",
+            "roomTypeName":"EmptyRoom",
+            "data":[
+                {"id":"1","Description":"You see {description of room}."},
+                {"id":"2","Description":"You see {description of room}."},
+                {"id":"3","Description":"You see {description of room}."},
+                {"id":"4","Description":"You see {description of room}."},
+                {"id":"5","Description":"You see {description of room}."},
+                {"id":"6","Description":"You see {description of room}."},
+                {"id":"7","Description":"You see {description of room}."},
+                {"id":"8","Description":"You see {description of room}."},
+                {"id":"9","Description":"You see {description of room}."},
+                {"id":"10","Description":"You see {description of room}."}
+            ]
+        },
+        {
+            "type":"2",
+            "roomTypeName":"EmptyRoom",
+            "data":[
+                {"id":"1","Description":"You see {description of room}."},
+                {"id":"2","Description":"You see {description of room}."},
+                {"id":"3","Description":"You see {description of room}."},
+                {"id":"4","Description":"You see {description of room}."},
+                {"id":"5","Description":"You see {description of room}."},
+                {"id":"6","Description":"You see {description of room}."},
+                {"id":"7","Description":"You see {description of room}."},
+                {"id":"8","Description":"You see {description of room}."},
+                {"id":"9","Description":"You see {description of room}."},
+                {"id":"10","Description":"You see {description of room}."}
+            ]
+        },
+        {
+            "type":"3",
+            "roomTypeName":"EmptyRoom",
+            "data":[
+                {"id":"1","Description":"You see {description of room}."},
+                {"id":"2","Description":"You see {description of room}."},
+                {"id":"3","Description":"You see {description of room}."},
+                {"id":"4","Description":"You see {description of room}."},
+                {"id":"5","Description":"You see {description of room}."},
+                {"id":"6","Description":"You see {description of room}."},
+                {"id":"7","Description":"You see {description of room}."},
+                {"id":"8","Description":"You see {description of room}."},
+                {"id":"9","Description":"You see {description of room}."},
+                {"id":"10","Description":"You see {description of room}."}
+            ]
+        },
+        {
+            "type":"4",
+            "roomTypeName":"EmptyRoom",
+            "data":[
+                {"id":"1","Description":"You see {description of room}."},
+                {"id":"2","Description":"You see {description of room}."},
+                {"id":"3","Description":"You see {description of room}."},
+                {"id":"4","Description":"You see {description of room}."},
+                {"id":"5","Description":"You see {description of room}."},
+                {"id":"6","Description":"You see {description of room}."},
+                {"id":"7","Description":"You see {description of room}."},
+                {"id":"8","Description":"You see {description of room}."},
+                {"id":"9","Description":"You see {description of room}."},
+                {"id":"10","Description":"You see {description of room}."}
+            ]
+        },
+        {
+            "type":"5",
+            "roomTypeName":"EmptyRoom",
+            "data":[
+                {"id":"1","Description":"You see {description of room}."},
+                {"id":"2","Description":"You see {description of room}."},
+                {"id":"3","Description":"You see {description of room}."},
+                {"id":"4","Description":"You see {description of room}."},
+                {"id":"5","Description":"You see {description of room}."},
+                {"id":"6","Description":"You see {description of room}."},
+                {"id":"7","Description":"You see {description of room}."},
+                {"id":"8","Description":"You see {description of room}."},
+                {"id":"9","Description":"You see {description of room}."},
+                {"id":"10","Description":"You see {description of room}."}
+            ]
+        }
+    ]
+}
