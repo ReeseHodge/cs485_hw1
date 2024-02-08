@@ -34,9 +34,9 @@ var currentState;
 var next_state_current;
 var directionArray=[];
 //gets the game data from GameMap.json
-jQuery.getJSON("GameMap.json",function(data){
-        game_data=data;
-        currentState=data["start_state"]
+jQuery.getJSON("GameMap.json",function(g_data){
+        game_data=g_data;
+        currentState=g_data["start_state"]
         console.log("Current_State = "+currentState);
         $('#game_text').html(game_data["states"][currentState]["text"])
 })
