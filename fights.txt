@@ -1,0 +1,27 @@
+<ul id="fight text" hidden="true">
+    <div id="battle_text_1"></div>
+    <div id="battle_text_2"></div>
+    <div id="enemy_dialoge"></div>
+    <div id="player_dialoge"></div>
+</ul>
+
+<ul id="fight" hidden="true">
+    Fight Controls
+    <button id="magic" onclick="key_input('magic')">Magic</button>       
+    <button onclick="">Attack</button>
+</ul>
+
+<ul id="Shop" hidden="true">
+    <button onclick="">Shop</button>
+    <button onclick="">Chat</button>
+    <button onclick="toggle_obj('Password input')">w0rdp@$$</button>
+    <button onclick=""></button>
+</ul>
+
+<ul id="Password input", hidden="true">
+    <input id="PasswordIn"></input>
+    <button id="PasswordSubmit">Submit</button>
+</ul>
+</body>
+</html>
+

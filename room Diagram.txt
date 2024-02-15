@@ -1,0 +1,11 @@
+if(type=="shop" && key_input == "interact"){
+	showShop();
+}else if (type=="chest" && key_input=="interact"){
+	giveChest();
+}else if (type=="mimic" && key_input=="interact"){
+	MimicBoss();
+}else if (type=="Enemy"){
+	"Use Boss Calculation"
+}else{
+	return;
+}

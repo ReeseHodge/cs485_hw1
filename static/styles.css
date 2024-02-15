@@ -1,0 +1,7 @@
+body {background-color: black;font-size:20px;color: white;}
+h1   {color: white; font-size: 20px;}
+p    {color: white;}
+button {color: white;background-color: black; font-size:20px;}
+div {color: white;font-size: 20px;}
+ul{list-style: none;padding: 0;margin: 0;}
+.submit{color: white;background-color: black; font-size:10px;}

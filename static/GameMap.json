@@ -1,0 +1,344 @@
+{   
+    "numberOfBossesBeaten":0,
+    "currentStimulus":0,
+    "currentDopamine":0,
+    "start_state":"start",
+    "states":{
+        "start":{
+            "text":"Welcome to the world of Tenebrea.",
+            "show_object":"startUp",
+            "next_state":[
+                {"state_name":"game_play","key_input":["start_game"]}
+            ]
+        },
+        "game_play":{
+            "text":"You see a empty room with 4 doors and a pillar of marble with words on it.",
+            "show_object": ["movement"], 
+            "movement_command":"true",
+            "next_state":[
+                {"state_name":"Writing_on_pillar","key_input":"interact"},
+                {"state_name":"game_play","key_input":["north","east","west","south"],"":""}
+            ]
+        },
+        "Writing_on_pillar":{
+            "text":"On the pillar of marble it is engraved: \"In this land there exists 4 demon lords and one demon goddess. Thou who art reading this, you cannot escape this dungeon until you defeat all 5.\"",
+            "next_state":[
+                {"state_name":"game_play","key_input":["north","east","west","south"]}
+            ]
+        },
+        "end":{
+            "text":"You completed the game."
+        }
+    },
+    "attack_skills":[
+    {"Name":"Fireball","CostType":"Mana","CostAmount":5,"Damage":10},
+    {"Name":"Snowball","CostType":"Mana","CostAmount":5,"Damage":10},
+    {"Name":"Water ball","CostType":"Mana","CostAmount":4,"Damage":10},
+    {"Name":"Sword Slash","CostType":"Stamina","CostAmount":10,"Damage":10},
+    {"Name":"Light ball","CostType":"Mana","CostAmount":10,"Damage":10},
+    {"Name":"Shield Bash","CostType":"Stamina","CostAmount":15,"Damage":10}
+    ],
+    "battle_skills":[
+    {"Name":"Analyze","CostType":"Mana","CostAmount":"5"},
+    {"Name":"Use Item","CostType":"","CostAmount":"0"},
+    {"Name":"Attack","CostType":"Stamina","CostAmount":""}
+    ],
+    "bosses":[
+        {
+            "id":1,
+            "Name":"Flaxia Barkridge",
+            "Description":"A evil dryad that is wanted for the attacks on human settlements on the outside of the dungeon",
+            "CurrentHP":100,
+            "CurrentMP":100,
+            "Skills":[
+                {"Name":"","MPCost":0,"flavor_text":""},
+                {"Name":"","MPCost":0,"flavor_text":""},
+                {"Name":"","MPCost":0,"flavor_text":""},
+                {"Name":"","MPCost":0,"flavor_text":""}
+                ]
+        },
+        {
+            "id":2,
+            "Name":"Celeste Mock",
+            "Description":"A Vampire that is wanted for the attacks on animals by animal farmers on the outside of the dungeon.",
+            "CurrentHP":100,
+            "CurrentMP":100,
+            "Skills":[
+                {"Name":"","MPCost":0,"flavor_text":""},
+                {"Name":"","MPCost":0,"flavor_text":""},
+                {"Name":"","MPCost":0,"flavor_text":""},
+                {"Name":"","MPCost":0,"flavor_text":""}
+            ]
+        },
+        {
+            "id":3,
+            "Name":"Ferula Norwood",
+            "Description":"A witch who uses all the elements and wants to study humans.",
+            "CurrentHP":100,
+            "CurrentMP":100,
+            "Skills":
+            [
+                {"Name":"Analyze","MPCost":20},
+                {"Name":"","MPCost":0},
+                {"Name":"","MPCost":0},
+                {"Name":"","MPCost":0}
+            ]
+        },
+        {
+            "id":4,
+            "Name":"Phantom",
+            "Description":"A fenrir who has a massive blood lust and is able to use shadows to jump around.",
+            "CurrentHP":1500,
+            "CurrentMP":900,
+            "Skills":
+            [
+                {"Name":"Shadow Jump","MPCost":20},
+                {"Name":"","MPCost":0},
+                {"Name":"","MPCost":0},
+                {"Name":"","MPCost":0}
+            ]
+        },
+        {
+            "id":5,
+            "Name":"Luna",
+            "Description":"A embodiment of the moon goddess in dragon form. She appeared to the party as a human shopkeeper before they reached her chambers.",
+            "CurrentHP":30000,
+            "CurrentMP":3000,
+            "Skills":[
+                {"Name":"All Analyze","MPCost":20},
+                {"Name":"Moon Phase: New Moon","MPCost":20,"flavor text":"She healed 20 points of damage."},
+                {"Name":"Moon Phase: Waxing Crescent","MPCost":20,"flavor text":"She builds up power."},
+                {"Name":"Moon Phase: First Quarter","MPCost":20,"flavor text":"She builds up power."},
+                {"Name":"Moon Phase: Waxing Gibbous","MPCost":20,"flavor text":"She builds up power."},
+                {"Name":"Moon Phase: Full Moon","MPCost":20,"flavor text":"She attacks the party with a lunar beam."},
+                {"Name":"Moon Phase: Waning Gibbous","MPCost":20,"flavor text":"She has to rebuild up her power."},
+                {"Name":"Moon Phase: Third Quarter","MPCost":20,"flavor text":"She has to rebuild up her power."},
+                {"Name":"Moon Phase: Waning Crescent","MPCost":20,"flavor text":"She is starting to cast heal."}
+            ],
+            "beforeBattle":"You are here. Welcome to your final challenge. You have beaten all my COMPATRIOTS, but now it is time to die.",
+            "possibleDialogue":[{"text":"You are here. Welcome to your final challenge. You have beaten all my COMPATRIOTS, but now it is time to die."},{"text":"You are here.  You have beaten all my COMPATRIOTS, but now it is time to die."},""],
+            "shopkeeper-Dialogue":[{"text":"Welcome to my humble shop. Do you have a promo code?"},{"text":"Ah the Promo Code... you must have traversed here before... Whelp, yep this is fine. Guess I have to admit it. I am the final boss, however that won't change, much."}] 
+        }
+    ],
+    "characters":[
+        {   
+            "ID":0,
+            "Name":"",
+            "Stats":[
+                {"valueType":"Hit Points","value":100},
+                {"valueType":"Stamina","value":100},
+                {"valueType":"Mana","value":100},
+                {"valueType":"Attack","value":0},
+                {"valueType":"Defense","value":0},
+                {"valueType":"Magic Attack","value":0},
+                {"valueType":"Magic Defense","value":0},
+                {"valueType":"Speed","value":0},
+                {"valueType":"Max Hit Points","value":100},
+                {"valueType":"Max Stamina Points","value":100},
+                {"valueType":"Max Mana","value":100},
+                {"valueType":"Gold","value":0},
+                {"valueType":"Skills","value":[]}
+            ],
+            "inventory":[]
+        },
+        {   
+            "ID":1,
+            "Name":"",
+            "Stats":[
+                {"valueType":"Hit Points","value":100},
+                {"valueType":"Stamina","value":100},
+                {"valueType":"Mana","value":100},
+                {"valueType":"Attack","value":0},
+                {"valueType":"Defense","value":0},
+                {"valueType":"Magic Attack","value":0},
+                {"valueType":"Magic Defense","value":0},
+                {"valueType":"Speed","value":0},
+                {"valueType":"Max Hit Points","value":100},
+                {"valueType":"Max Stamina Points","value":100},
+                {"valueType":"Max Mana","value":100},
+                {"valueType":"Gold","value":0},
+                {"valueType":"Skills","value":[]}
+            ]
+        },
+        {   
+            "ID":2,
+            "Name":"",
+            "Stats":[
+                {"valueType":"Hit Points","value":100},
+                {"valueType":"Stamina","value":100},
+                {"valueType":"Mana","value":100},
+                {"valueType":"Attack","value":0},
+                {"valueType":"Defense","value":0},
+                {"valueType":"Magic Attack","value":0},
+                {"valueType":"Magic Defense","value":0},
+                {"valueType":"Speed","value":0},
+                {"valueType":"Max Hit Points","value":100},
+                {"valueType":"Max Stamina Points","value":100},
+                {"valueType":"Max Mana","value":100},
+                {"valueType":"Gold","value":0},
+                {"valueType":"Skills","value":[]}
+            ]
+        },
+        {   
+            "ID":3,
+            "Name":"",
+            "Stats":[
+                {"valueType":"Hit Points","value":100},
+                {"valueType":"Stamina","value":100},
+                {"valueType":"Mana","value":100},
+                {"valueType":"Attack","value":0},
+                {"valueType":"Defense","value":0},
+                {"valueType":"Magic Attack","value":0},
+                {"valueType":"Magic Defense","value":0},
+                {"valueType":"Speed","value":0},
+                {"valueType":"Max Hit Points","value":100},
+                {"valueType":"Max Stamina Points","value":100},
+                {"valueType":"Max Mana","value":100},
+                {"valueType":"Gold","value":0},
+                {"valueType":"Skills","value":[]}
+            ]
+        }
+    ],
+    "directions":[
+        {"1":"north"},
+        {"2":"west"},
+        {"3":"east"},
+        {"4":"south"}
+    ],
+    "enemy_types":[
+        {
+            "id":0,
+            "type":"Slimes",
+            "kinds":[{"type":"fire slime"},{"type":"water slime"},{"type":"earth slime"},{"type":"electricity slime"},{"type":"ice slime"},{"type":"wind slime"},{"type":"light slime"},{"type":"dark slime"}],
+            "amounts":[1,2,3,4,5],
+            "CurrentHP":10
+        },
+        {
+            "id":1,
+            "type":"Bats",
+            "kinds":[{"type":"fire bat"},{"type":"large bat"},{"type":"vampiric bat"}],
+            "amounts":[1,2,3,4,5],
+            "CurrentHP":20
+        },
+        {
+            "id":2,
+            "type":"Zombies",
+            "amounts":[1,2,3,4,5],
+            "CurrentHP":40
+        },
+        {
+            "id":3,
+            "type":"Wolves",
+            "kinds":[{"type":"Direwolf"},{"type":"Wolves"}],
+            "amounts":[1,2,3,4,5],
+            "CurrentHP":80
+        },
+        {
+            "id":4,
+            "type":"Kobolds",
+            "kinds":[],
+            "amounts":[1,2,3,4,5],
+            "CurrentHP":100
+        }
+    ],
+    "items":[
+    {"ID":1,"Name":"Health Pot.","Description":"Restores Health by 10%."},
+    {"ID":2,"Name":"Stamina Pot.","Description":"Restores Stamina by 10%."},
+    {"ID":3,"Name":"Mana Pot.","Description":"Restores Mana by 10% ."},
+    {"ID":4,"Name":"Resurrection Pot.","Description":"Revives a character."},
+    {"ID":5,"Name":"Iron Sword","Description":"A sword made of iron."},
+    {"ID":6,"Name":"Iron Battle Axe","Description":"A battle axe made of iron."},
+    {"ID":7,"Name":"Iron Greatsword","Description":"A greatsword made of iron."},
+    {"ID":8,"Name":"Gold x 10","Description":"10 Gold Pieces"},
+    {"ID":9,"Name":"Gold x 20","Description":"20 Gold Pieces"},
+    {"ID":10,"Name":"Gold x 45","Description":"45 Gold Pieces"},
+    {"ID":11,"Name":"Gold x 50","Description":"50 Gold Pieces"},
+    {"ID":12,"Name":"Gold x 99","Description":"99 Gold Pieces"}
+    ],
+    "prev_rooms":[],
+    "room_types":[
+        {"id":1,"typeName":"Empty Room","Description":"A safe empty room that has only entrances to other rooms.","stimulusChange":0,"dopamineChange":0},
+        {"id":2,"typeName":"Chest Room","Description":"A room that has entrances to other rooms, as well as a chest, in which you will be given a item","stimulusChange":1,"dopamineChange":2},
+        {"id":3,"typeName":"Enemy Room","Description":"A empty room that has only entrances to other rooms.","stimulusChange":1,"dopamineChange":2},
+        {"id":4,"typeName":"Mimic Room","Description":"A room that has entrances to other rooms, as well as a chest mimic, that will attack when opened.","stimulusChange":1,"dopamineChange":1},
+        {"id":5,"typeName":"Shop Room","Description":"A safe room where there is a shop keeper who will trade gold for ","stimulusChange":1,"dopamineChange":1},
+        {"id":6,"typeName":"Boss Room","Description":"A almost empty room that has 2 entrances to other rooms, and the final boss of the floor.","stimulusChange":2,"dopamineChange":0},
+        {"id":7,"typeName":"Treasure Room","Description":"A room with a ton of gold and objects","stimulusChange":0,"dopamineChange":1},
+        {"id":8,"typeName":"Stairs Down","Description":"A room with stairs that head down to the next floor. Beware, the stairs will disappear as soon as you go down them.","stimulusChange":2,"dopamineChange":2}
+    ],
+    "room_descriptions":[
+        {
+            "data":[
+                {"id":"1","Description":"You see {description of room}."},
+                {"id":"2","Description":"You see {description of room}."},
+                {"id":"3","Description":"You see {description of room}."},
+                {"id":"4","Description":"You see {description of room}."},
+                {"id":"5","Description":"You see {description of room}."}
+            ]
+        },{
+            "data":[
+                {"id":"1","Description":"You see {description of room}."},
+                {"id":"2","Description":"You see {description of room}."},
+                {"id":"3","Description":"You see {description of room}."},
+                {"id":"4","Description":"You see {description of room}."},
+                {"id":"5","Description":"You see {description of room}."}
+            ]
+        },{
+            "data":[
+                {"id":"1","Description":"You see {description of room}."},
+                {"id":"2","Description":"You see {description of room}."},
+                {"id":"3","Description":"You see {description of room}."},
+                {"id":"4","Description":"You see {description of room}."},
+                {"id":"5","Description":"You see {description of room}."}
+            ]
+        },{
+            "data":[
+                {"id":"1","Description":"You see {description of room}."},
+                {"id":"2","Description":"You see {description of room}."},
+                {"id":"3","Description":"You see {description of room}."},
+                {"id":"4","Description":"You see {description of room}."},
+                {"id":"5","Description":"You see {description of room}."}
+            ]
+        },{
+            "data":[
+                {"id":"1","Description":"You see a room with a hastily built wooden shop front."},
+                {"id":"2","Description":"You see a room with a brick building with a shop."},
+                {"id":"3","Description":"You see {description of room}."},
+                {"id":"4","Description":"You see {description of room}."},
+                {"id":"5","Description":"You see {description of room}."}
+            ]
+        },{
+            "data":[
+                {"id":"1","Description":"You see {description of room}."},
+                {"id":"2","Description":"You see {description of room}."},
+                {"id":"3","Description":"You see {description of room}."},
+                {"id":"4","Description":"You see {description of room}."},
+                {"id":"5","Description":"You see {description of room}."}
+            ]
+        },{
+            "data":[
+                {"id":"1","Description":"You see a room full of gold.","itemsGivenArr":[8,9,10,11,12]},
+                {"id":"2","Description":"You see a room with a single chest. ","itemsGivenArr":[1,2,3,4,11]},
+                {"id":"3","Description":"You see a treasure room with an empty chest and no items."},
+                {"id":"4","Description":"You see {description of room}."},
+                {"id":"5","Description":"You see {description of room}."}
+            ]
+        },{
+            "data":[
+                {"id":"1","Description":"You see a room with stairs."},
+                {"id":"2","Description":"You see a room with stairs."},
+                {"id":"3","Description":"You see a room with stairs."},
+                {"id":"4","Description":"You see a room with stairs."},
+                {"id":"5","Description":"You see a room with stairs."}
+            ]
+        }
+    ],
+    "shop_items":[
+        {"id":1,"Name":"Sleeping Bag & Provisions","price":0, "stock":4},
+        {"id":2,"Name":"Nexus, Token of Thunder","price":10,"stock":1},
+        {"id":3,"Name":"Bag of Holding","price":1,"stock":1},
+        {"id":4,"Name":"Mana Pot.","price":1,"stock":100},
+        {"id":5,"Name":"Stamina Pot.","price":1,"stock":100},
+        {"id":6,"Name":"Health Pot.","price":1,"stock":100}
+    ]
+}

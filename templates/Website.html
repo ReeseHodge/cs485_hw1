@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html>  
+<head>
+    <title>(Game Title)</title>
+    <link rel= "stylesheet" type= "text/css" src= "../static/styles.css">
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+    <script src="../static/script.js" type="text/javascript"></script>
+    <link rel="json" type="text/json" src= "static/GameMap.json">
+    <link rel="icon" src="../static/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" src="../static/favicon.ico" type="image/x-icon">      
+</head>
+<body crossorigin="anonymous">
+<div id="game_text" hidden="true"></div>
+<ul id="fight text" hidden="true">
+    <div id="battle_text_1"></div>
+    <div id="battle_text_2"></div>
+    <div id="enemy_dialoge"></div>
+    <div id="player_dialoge"></div>
+</ul>
+<ul id="startUp">
+    Welcome to the world of Tenebrea.
+    <div>
+        <button id="start" onclick="startGame()">Start Game</button>
+    </div>
+</ul>
+<ul id="characterSetUp" hidden="true">
+    <div id="character"></div>
+    <input id="nameInput"></input>
+    <button id="submit" onclick="characterCreator()">Submit</button>
+</ul>
+<ul id="movement" justified="left" hidden="true">
+    <h1>Move in what Direction?</h1>
+    <button id="north" onclick="key_input(north)">North</button>
+    <button id="west" onclick="key_input(west)">West</button>
+    <button id="east" onclick="key_input(east)">East</button>
+    <button id="south" onclick="key_input(south)">South</button>
+    <button id="interact" onclick="key_input(interact)">interact</button>
+</ul>
+<ul id="main" hidden="true">
+    <h1>Main Menu:</h1>
+    <button id="inventory" onclick="showInventory()">Inventory</button>
+    <button id="characters" onclick="showCharacters()">Characters</button>
+</ul>
+<ul id="controls" hidden="true">
+<button onclick="toggle_obj('main')">Main Menu</button>
+<button onclick="toggle_obj('movement')">Movement Menu </button>
+</ul>
+<ul id="fight" hidden="true">
+    <button onclick="magic()">Magic</button>
+    <button onclick="attack()">Attack</button>
+</ul>
+<ul id="Shop" hidden="true">
+    <button onclick="shop()">Shop</button>
+    <button onclick="">Chat</button>
+    <button onclick="toggle_obj('Password input')">w0rdp@$$</button>
+    <button onclick=""></button>
+</ul>
+<ul id="Password input", hidden="true">
+    <input id="PasswordIn"></input>
+    <button id="PasswordSubmit">Submit</button>
+</ul>
+</body>
+</html>
